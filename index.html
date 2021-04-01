@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA API Pictures</title>
+    <!-- <link rel="shortcut icon" type="image/jpg" href=""/> -->
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=nasa.gov">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader hidden">
+        <img src="loader.svg" alt="Loading Animation">
+    </div>
+    <div class="container">
+        <!-- Navigation -->
+        <div class="navigation-container">
+            <!-- Results Nav -->
+            <div class="navigation-items" id="resultsNav">
+                <h2 class="clickable" onclick="updateDOM('favourites')">Favourites</h2>
+                <h2 style="font-size: 35px; color: rgb(54, 54, 54);">&#8226;</h2>
+                <h2 class="clickable" onclick="getNasaPictures()">Load More</h2>
+            </div>
+            <!-- Favourites Nav -->
+            <div class="navigation-items hidden" id="favouritesNav">
+                <h2 class="clickable" onclick="getNasaPictures()">Load More Nasa Images</h2>
+            </div>
+        </div>
+        <!-- Images Container -->
+        <div class="images-container"></div>
+        <!-- Save Confirmation -->
+        <div class="save-confirmation hidden">
+            <img src="bookmark.svg" alt="Bookmark Animation">
+            <h3>Added to Favourites</h3>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src = "script.js"></script>
+</body>
+</html>
